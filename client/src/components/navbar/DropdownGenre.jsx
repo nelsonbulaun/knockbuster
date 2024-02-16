@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, NavLink } from "react-router-dom";
 import { url } from "../../helpers";
+const axiosurl = url+"/products/search/genres/genrelist"
 
 export const DropdownGenre = ({ isOpen, onClose }) => {
   const [genres, setGenres] = useState();
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/products/search/genres/genrelist")
+      .get(axiosurl)
       .then((res) => {
         const genrelist = res.data;
         setGenres(genrelist);

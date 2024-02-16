@@ -10,8 +10,8 @@ import { useWatchLists } from "../contexts/WatchListContext";
 import TrailerModal from "../components/trailerModal";
 import Modal from "../components/Modal";
 import { ReactComponent as PlayIcon } from "../assets/play.svg";
-const apisite = "http://localhost:8080/products/";
 import { url } from "../helpers";
+const apisite = url + "/products/";
 
 
 // create function that imports object name, price, description

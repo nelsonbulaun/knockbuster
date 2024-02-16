@@ -8,6 +8,8 @@ import movieCollage from "../assets/moviecollage.jpg";
 import { SplitScreen } from "../components/SplitScreen";
 const storeduser = localStorage.getItem("user");
 import { url } from "../helpers";
+const axiosurl = url + "/login";
+
 
 export const Login = () => {
   const [username, setUsername] = useState("");
@@ -28,7 +30,7 @@ export const Login = () => {
   function handleSubmit(e) {
     Axios({
       method: "POST",
-      url: `${url + "/login"}`,
+      url: axiosurl,
       data: {
         username: username,
         password: password,

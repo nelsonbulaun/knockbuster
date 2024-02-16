@@ -27,7 +27,7 @@ const AuthProvider = ({ children }) => {
         setUser(json_user);
         console.log(json_user.username);
         // user is set and is not a temp user
-        if (!(json_user["username"].startsWith("temp-"))) {
+        if ( json_user != undefined && !(json_user["username"].startsWith("temp-"))) {
           setAuth(true);
           setNotificationType("alert");
           setNotificationText(`Welcome Back ${json_user.username}`);
