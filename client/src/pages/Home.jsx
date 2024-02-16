@@ -17,8 +17,8 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const [genreResponse, itemsResponse] = await Promise.all([
-          axios.get("http://localhost:8080/products/search/genres/genrelist"),
-          axios.get("http://localhost:8080/products"),
+          axios.get(url+"/products/search/genres/genrelist"),
+          axios.get(url+"/products"),
         ]);
 
         setGenres(genreResponse.data);
