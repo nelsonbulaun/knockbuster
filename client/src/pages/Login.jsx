@@ -10,7 +10,6 @@ const storeduser = localStorage.getItem("user");
 import { url } from "../helpers";
 const axiosurl = url + "/login";
 
-
 export const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -39,12 +38,18 @@ export const Login = () => {
     }).then((res) => {
       console.log(res);
       alert(res.data);
-      if (res.status === 200 && res.data === "Successfully Authenticated") {
+      // if (res.status === 200 && res.data === "Successfully Authenticated") {
+      if (res.status === 200) {
         // if a stored user already exists, remove it form the local storage for replacement
         if (storeduser) {
-          localStorage.removeItem("user");
+          // localStorage.removeItem("user");
+          localStorage.setItem("user", JSON.stringify(res.data));
+          setAuth(true);
+          setUser(res.data);
+          setNotificationType("alert");
+          setNotificationText(`Welcome Back ${res.data.username}`);
         }
-        getUser();
+        // getUser();
       }
       setUsername("");
       setPassword("");
