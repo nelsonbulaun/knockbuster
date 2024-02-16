@@ -78,7 +78,7 @@ exports.cart_update_product = asyncHandler(async (req, res, next) => {
 
   if (!updated_cart) {
     updated_cart = await Cart.findOneAndUpdate(
-      { username: req.body.username }, 
+      { username: req.body.username },
       {
         $push: {
           products: {
@@ -120,10 +120,20 @@ exports.cart_update_product = asyncHandler(async (req, res, next) => {
 
 // not sure if this works yet
 exports.cart_find_username = asyncHandler(async (req, res, next) => {
-  const UserCarts = await Cart.find({ username: req.params.username })
-    .sort({ id: 1 })
-    .exec();
-  res.json(UserCarts[0]);
+  const UserCarts = await Cart.find({ username: req.params.username }).sort({
+    id: 1,
+  });
+  if (UserCarts.length > 0) {
+    res.json(UserCarts[0]);
+  } else {
+    const newCart = new Cart({
+      username: req.params.username,
+    });
+
+    await newCart.save();
+
+    res.json(newCart);
+  }
 });
 
 // exports.cart_total_username = asyncHandler(async (req, res, next) => {
@@ -218,7 +228,7 @@ exports.cart_total_username = asyncHandler(async (req, res, next) => {
       },
     },
   ]).exec();
-  
+
   if (!cart_total || cart_total.length === 0) {
     res.json([
       {
@@ -229,6 +239,6 @@ exports.cart_total_username = asyncHandler(async (req, res, next) => {
       },
     ]);
   }
-  
+
   res.json(cart_total[0]);
 });

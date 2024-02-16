@@ -20,7 +20,7 @@ const ProductProfile = () => {
   const json_user = JSON.parse(user);
   const { id } = useParams();
   const { cart, setCart } = useCart();
-  const { quantity, setQuantity } = useTotal();
+  // const { quantity, setQuantity } = useTotal();
   const { watchLists, setWatchLists, updateListInWatchLists } = useWatchLists();
   const [item, setItem] = useState([]);
   const [selectedWatchList, setSelectedWatchList] =
@@ -52,10 +52,10 @@ const ProductProfile = () => {
       setItem(item);
       setGenreList(item.genre);
       setIsLoading(false);
-      setSelectedVersion(res.data.productType[0]);
+      setSelectedVersion(item.productType[0]);
       setSelectedWatchList("Your Watch Lists");
       if (res.data.trailerImage) {
-        setBackgroundImage(res.data.trailerImage);
+        setBackgroundImage(item.trailerImage);
       }
     });
   }, [id]);
@@ -64,7 +64,7 @@ const ProductProfile = () => {
     setSelectedVersion(e);
   }
 
-  function handleSubmit(e) {
+  function handleSubmit(id, selectedVersion) {
     axios({
       method: "POST",
       data: {
@@ -78,9 +78,6 @@ const ProductProfile = () => {
     }).then((res) => {
       if (res.status === 200) {
         setCart(res.data);
-        setQuantity((prevState) => {
-          prevState += 1;
-        });
       }
     });
   }
@@ -183,16 +180,13 @@ const ProductProfile = () => {
                 </div>
               </div>
               <div className="flex flex-col">
-                <form>
                   <button
                     className="hover:text-blockbuster-blue hover:bg-blockbuster-yellow text-blockbuster-yellow font-bold py-2 px-4 border border-blockbuster-yellow rounded btn-md"
-                    onClick={handleSubmit}
+                    onClick={() => handleSubmit(id, selectedVersion)}
                   >
                     {" "}
                     ADD TO CART{" "}
                   </button>
-                </form>
-
                 <div className="dropdown">
                   <div
                     tabIndex={0}
