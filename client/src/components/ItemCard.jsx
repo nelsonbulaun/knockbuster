@@ -22,7 +22,7 @@ const HoveredObject = ({ item }) => {
     <div className="absolute hover:scale-y-110 hover:scale-x-110 hover:z-[100] block  rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-black">
       <div className="relative overflow-hidden bg-cover bg-no-repeat">
         <div className="absolute flex h-full w-full bg-black/75 place-content-center align-middle">
-          <div className="flex-col place-items-center self-center p-6">
+          <div className="flex-col place-items-center self-center p-2 w-full">
             <Link to={"/products/" + item.id}>
               <h5 className="mb-2 font-itcmachine text-3xl tracking-[0.07em] text-black-900 dark:text-white">
                 {item.title}
@@ -47,7 +47,7 @@ const HoveredObject = ({ item }) => {
                 </p>
               )}
             </div>
-            <p className="text-sm font-base text-neutral-600 dark:text-neutral-200  mb-4 ">
+            <p className="text-sm text-neutral-600 dark:text-neutral-200  mb-4 ">
               {item.description}
             </p>
 

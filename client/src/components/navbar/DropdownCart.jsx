@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Carticon } from "../../assets/cart.svg";
-import CartDropdownTest from "./CartDropDown";
+import CartDropdownTest from "./CartDropDownContent";
 import React from "react";
 import { useCart } from "../../contexts/CartContext";
 import { useTotal } from "../../contexts/TotalContext";
 import "../../index.css";
 
-function Dropdown({ isOpen, onClose }) {
+function DropdownCart({ isOpen, onClose }) {
   const { cart } = useCart();
   const { quantity, total } = useTotal();
   const [cartQuantity, setCartQuantity] = useState(0);
@@ -70,4 +70,4 @@ function Dropdown({ isOpen, onClose }) {
   );
 }
 
-export default Dropdown;
+export default DropdownCart;

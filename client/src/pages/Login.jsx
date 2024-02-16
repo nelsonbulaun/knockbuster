@@ -78,8 +78,8 @@ export const Login = () => {
   const content = (
     <div>
       <div className="text-left pb-3">
-        <Link to="/register">
-          <a className="text-sm">New User? Create An Account</a>
+        <Link to="/register" className="text-sm">
+         New User? Create An Account
         </Link>
       </div>
       <form

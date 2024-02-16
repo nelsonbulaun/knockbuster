@@ -1,7 +1,7 @@
 import "../../index.css";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
-import Dropdown from "./Dropdown";
+import DropdownCart from "./DropdownCart";
 import DropdownAccount from "./DropdownAccount";
 import { NavLink } from "react-router-dom";
 import DropdownGenre from "./DropdownGenre";
@@ -46,19 +46,16 @@ export default function Navbar() {
       <nav className="flex-col justify-between text-white w-full relative z-[100]">
         <div className="px-10 py-6 flex w-full items-center mx-auto">
           <Link to="/">
-          <div
-              id="logo"
-              className="rotate-355 bg-white/10 p-2"
-            >
-            <div
-              id="logo"
-              className="border border-blockbuster-yellow border-r-0 p-2"
-            >
-              <h1 id="title" className="text-3xl">
-                {" "}
-                KnockBuster{" "}
-              </h1>
-            </div>
+            <div id="logo" className="rotate-355 bg-white/10 p-2">
+              <div
+                id="logo"
+                className="border border-blockbuster-yellow border-r-0 p-2"
+              >
+                <h1 id="title" className="text-3xl">
+                  {" "}
+                  KnockBuster{" "}
+                </h1>
+              </div>
             </div>
           </Link>
           <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12 h-full place-items-center">
@@ -158,19 +155,21 @@ export default function Navbar() {
                       }
                       onClick={toggleCartDropdown}
                     >
-                      <Dropdown
+                      <DropdownCart
                         isOpen={cartDropdownOpen}
                         onClose={() => setCartDropdownOpen(false)}
                       />
                     </div>
                   </li>
                   <li>
-                    <div className={
+                    <div
+                      className={
                         accountDropdownOpen
                           ? "bg-gradient-to-b from-black/70 to-transparent text-xl h-full z-[100] py-1 px-2 "
                           : "non-active-class text-xl py-1 px-2 z-[100]"
                       }
-                      onClick={toggleAccountDropdown}>
+                      onClick={toggleAccountDropdown}
+                    >
                       <DropdownAccount
                         isOpen={accountDropdownOpen}
                         onClose={() => setAccountDropdownOpen(false)}
@@ -182,7 +181,19 @@ export default function Navbar() {
               ) : (
                 <>
                   <li>
-                    <Dropdown />
+                  <div
+                      className={
+                        cartDropdownOpen
+                          ? "bg-gradient-to-b from-black/50 to-transparent text-xl h-full p-1"
+                          : "non-active-class text-xl p-1"
+                      }
+                      onClick={toggleCartDropdown}
+                    >
+                      <DropdownCart
+                        isOpen={cartDropdownOpen}
+                        onClose={() => setCartDropdownOpen(false)}
+                      />
+                    </div>
                   </li>
                   <li className="mr-3">
                     <Link id="title" className="text-xl" to="/login">
