@@ -4,7 +4,9 @@ import { ReactComponent as DVDIcon } from "./assets/dvd.svg";
 import { ReactComponent as BluRayIcon } from "./assets/bluray.svg";
 const apisite = "http://localhost:8080/products/";
 
-export const url = "http://localhost:8080";
+// export const url = "http://localhost:8080";
+export const url = "https://knockbuster-server.onrender.com";
+
 
 export function ConvertKeytoCart(props) {
     const [item, setItem] = useState([]);
