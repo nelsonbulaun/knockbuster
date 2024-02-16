@@ -26,7 +26,7 @@ const Router = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="knockbuster" element={<Layout />}>
-        <Route path="/" element={<Home />} />
+        <Route path="" element={<Home />} />
         <Route path="about" element={<AboutUs />} />
         <Route path="login" element={<Login />} />
         <Route path="logout" element={<Logout />} />
