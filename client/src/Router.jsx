@@ -25,7 +25,7 @@ import AccountSettings from "./pages/AccountSettings";
 const Router = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route element={<Layout />}>
+      <Route path="knockbuster" element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<AboutUs />} />
         <Route path="login" element={<Login />} />
