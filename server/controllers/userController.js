@@ -16,6 +16,7 @@ exports.user_login = async (req, res, next) => {
       req.logIn(user, (err) => {
         if (err) throw err;
         res.send("Successfully Authenticated");
+        console.log("authentication successful");
         console.log(req.user);
       });
     }
@@ -39,6 +40,7 @@ exports.user_register = async (req, res, next) => {
         });
         const result = await user.save();
         res.send(user);
+        console.log("user information sent to client side");
       }
     });
   } catch (err) {
