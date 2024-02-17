@@ -8,7 +8,7 @@ import { Fragment } from "react";
 import "../index.css";
 import { useAuth } from "../contexts/AuthContext";
 import { ConvertKeytoCart } from "../helpers";
-const site = "/products/";
+const site = "/knockbuster/products/";
 import { url } from "../helpers";
 
 const initialState = {
