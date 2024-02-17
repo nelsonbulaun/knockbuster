@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { ReactComponent as DVDIcon } from "./assets/dvd.svg";
 import { ReactComponent as BluRayIcon } from "./assets/bluray.svg";
-// export const url = "http://localhost:8080";
 export const url = "https://knockbuster-server.onrender.com";
 
 

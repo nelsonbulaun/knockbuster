@@ -568,7 +568,7 @@ export const CartTest = () => {
                   {cart.products?.map((product, index) => (
                     <Fragment key={index}>
                       <div className="py-8">
-                        <Link to={site + product.productId}>
+                        <Link to={`${site + product.productId}`}>
                           <ConvertKeytoCart
                             pid={product.productId}
                             ptype={product.productType}
