@@ -62,7 +62,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 id="title"
-                to=""
+                to="" end
                 onClick={() => {
                   closeAllDropdowns();
                 }}
