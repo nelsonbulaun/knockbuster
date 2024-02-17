@@ -49,6 +49,7 @@ const ProductProfile = () => {
     axios.get(apisite + id).then((res) => {
       const item = res.data;
       console.log(res.data);
+      console.log(id);
       setItem(item);
       setGenreList(item.genre);
       setIsLoading(false);

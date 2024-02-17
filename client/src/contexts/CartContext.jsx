@@ -32,7 +32,7 @@ const CartProvider = ({ children }) => {
        };
        newCart();
     }
-   }, [user, json_user]);
+   }, [user]);
   
 
   return (

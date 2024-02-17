@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-const site = "/products/";
+const site = "/knockbuster/products/";
 import { url } from "../helpers";
 
 

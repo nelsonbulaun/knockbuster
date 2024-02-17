@@ -48,6 +48,7 @@ export const Login = () => {
           setUser(res.data);
           setNotificationType("alert");
           setNotificationText(`Welcome Back ${res.data.username}`);
+          navigate("");
         }
         // getUser();
       }
