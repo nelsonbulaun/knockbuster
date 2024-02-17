@@ -45,7 +45,7 @@ export default function Navbar() {
     <>
       <nav className="flex-col justify-between text-white w-full relative z-[100]">
         <div className="px-10 py-6 flex w-full items-center mx-auto">
-          <Link to="/">
+          <Link to="">
             <div id="logo" className="rotate-355 bg-white/10 p-2">
               <div
                 id="logo"
@@ -62,7 +62,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 id="title"
-                to="/"
+                to=""
                 onClick={() => {
                   closeAllDropdowns();
                 }}
@@ -78,7 +78,7 @@ export default function Navbar() {
             <li className="flex items-center justify-center">
               <NavLink
                 id="title"
-                to="/products"
+                to="products"
                 onClick={() => {
                   closeAllDropdowns();
                 }}
@@ -111,7 +111,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 id="title"
-                to="/AddProduct"
+                to="AddProduct"
                 onClick={() => {
                   closeAllDropdowns();
                 }}
@@ -127,7 +127,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 id="title"
-                to="/About"
+                to="About"
                 onClick={() => {
                   closeAllDropdowns();
                 }}
@@ -174,7 +174,7 @@ export default function Navbar() {
                         isOpen={accountDropdownOpen}
                         onClose={() => setAccountDropdownOpen(false)}
                       />
-                      <Link to="/logout"></Link>
+                      <Link to="logout"></Link>
                     </div>
                   </li>
                 </div>
@@ -196,12 +196,12 @@ export default function Navbar() {
                     </div>
                   </li>
                   <li className="mr-3">
-                    <Link id="title" className="text-xl" to="/login">
+                    <Link id="title" className="text-xl" to="login">
                       Log-In
                     </Link>
                   </li>
                   <li className="mr-3">
-                    <Link id="title" className="text-xl" to="/register">
+                    <Link id="title" className="text-xl" to="register">
                       Sign-Up
                     </Link>
                   </li>

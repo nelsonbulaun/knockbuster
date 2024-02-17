@@ -77,7 +77,7 @@ app.use(
 app.use(cookieParser("secret"));
 app.use(
   cors({
-    origin: "http://localhost:5173", // <-- location of the react app were connecting to
+    origin: "https://nelsonbulaun.github.io", // <-- location of the react app were connecting to
     credentials: true,
   })
 );

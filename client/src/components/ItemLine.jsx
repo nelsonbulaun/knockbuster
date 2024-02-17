@@ -32,7 +32,7 @@ export const ItemLine = ({ item }) => {
       />
 
       <div className="px-4 w-full h-96 md:h-auto flex-row place-content-center place-items-center">
-        <NavLink to={"/products/" + item.id}>
+        <NavLink to={`${"/knockbuster/products/" + item.id}`}>
           <h5 className="justify-center font-itcmachine text-3xl text-outline-solid tracking-[0.07em] text-black-900 dark:text-white">
             {item.title}
           </h5>

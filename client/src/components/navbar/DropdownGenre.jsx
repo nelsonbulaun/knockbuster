@@ -28,7 +28,7 @@ export const DropdownGenre = ({ isOpen, onClose }) => {
         <div className="absolute z-10 mt-2 w-[500px] rounded-md outline outline-t-none backdrop-blur outline-solid outline-black/10 shadow-xl left-1/2 transform -translate-x-1/2">
           <div className="grid grid-cols-5">
             {genres?.map((genre) => (
-              <NavLink role="menuitem" key={genre} to={"/genres/" + genre}>
+              <NavLink role="menuitem" key={genre} to={"genres/" + genre}>
                 {genre}
               </NavLink>
             ))}

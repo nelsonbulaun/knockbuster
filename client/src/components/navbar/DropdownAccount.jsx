@@ -32,21 +32,21 @@ function Dropdown({ isOpen, onClose }) {
                     <Link
                       className="block px-4 py-2 text-sm text-gray-700 "
                       role="menuitem"
-                      to="/account-settings"
+                      to="account-settings"
                     >
                       Account Settings
                     </Link>
                     <Link
                       className="block px-4 py-2 text-sm text-gray-700"
                       role="menuitem"
-                      to="/account-settings"
+                      to="account-settings"
                     >
                       {user.username}
                     </Link>
                   </div>
       
               ) : (
-                <Link to="/account-settings"
+                <Link to="account-settings"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                     role="menuitem"
                   >
@@ -54,7 +54,7 @@ function Dropdown({ isOpen, onClose }) {
                 
                 </Link>
               )}
-              <Link to="/watchListMenu">
+              <Link to="watchListMenu">
                 <li
                   className="block px-4 py-1 text-xs text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                   role="menuitem"
@@ -62,7 +62,7 @@ function Dropdown({ isOpen, onClose }) {
                   Watch Lists
                 </li>{" "}
               </Link>
-              <Link to="/changepassword">
+              <Link to="changepassword">
                 <li
                   className="block px-4 py-1 text-xs text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                   role="menuitem"

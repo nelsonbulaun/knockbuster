@@ -57,7 +57,7 @@ function DropdownCart({ isOpen, onClose }) {
               <CartDropdownTest />
             </div>
             <Link
-              to="/cart"
+              to="cart"
               className="block px-4 py-2 text-sm  text-center text-gray-700 hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >

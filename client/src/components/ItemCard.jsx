@@ -23,7 +23,7 @@ const HoveredObject = ({ item }) => {
       <div className="relative overflow-hidden bg-cover bg-no-repeat">
         <div className="absolute flex h-full w-full bg-black/75 place-content-center align-middle">
           <div className="flex-col place-items-center self-center p-2 w-full">
-            <Link to={"/products/" + item.id}>
+            <Link to={`${"/knockbuster/products/" + item.id}`}>
               <h5 className="mb-2 font-itcmachine text-3xl tracking-[0.07em] text-black-900 dark:text-white">
                 {item.title}
               </h5>
