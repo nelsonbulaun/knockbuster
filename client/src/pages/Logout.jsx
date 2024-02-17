@@ -19,14 +19,13 @@ export const Logout = () => {
     }).then((res) => {
       localStorage.removeItem("user");
       setAuth(false);
-      setUser("");
-
+      setUser();
     });
   }
 
   useEffect(()=>{
     if (!storeduser){
-      navigate("/login");
+      navigate("/knockbuster/login");
     }
   },[]);
 

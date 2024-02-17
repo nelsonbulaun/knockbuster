@@ -4,7 +4,7 @@ import axios from "axios";
 import "../index.css";
 import PasswordChange from "./PasswordChange";
 import { useAuth } from "../contexts/AuthContext";
-import { ObjectToString } from "../components/Cart";
+import { ObjectToString } from "./Cart";
 import Accordion from "../components/Accordian";
 import { url } from "../helpers";
 

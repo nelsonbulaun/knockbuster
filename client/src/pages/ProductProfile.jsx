@@ -117,7 +117,9 @@ const ProductProfile = () => {
       }
     }
   }
-
+  const render = () => {
+    if (isLoading)
+      return <span className="loading loading-spinner loading-md"></span>;
   return (
     <div className="flex">
       <img
@@ -250,5 +252,7 @@ const ProductProfile = () => {
     </div>
   );
 };
+return render();
+}
 
 export default ProductProfile;

@@ -44,7 +44,7 @@ const TotalProvider = ({ children }) => {
         setLoading(false);
       });
     }
-  }, [cart]);
+  }, [user, cart]);
 
   return (
     <TotalContext.Provider value={{ total, setTotal, quantity, setQuantity }}>

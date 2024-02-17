@@ -21,11 +21,12 @@ const AuthProvider = ({ children }) => {
   const { notificationType, setNotificationType, notificationText, setNotificationText } = useAlert();
 
   useEffect(() => {
+    console.log(json_user);
     const fetchData = async () => {
       // case user is not set, but previously stored user exists
       if (!user && storeduser) {
         setUser(json_user);
-        console.log(json_user.username);
+
         // user is set and is not a temp user
         if ( json_user != undefined && !(json_user["username"].startsWith("temp-"))) {
           setAuth(true);
@@ -51,7 +52,7 @@ const AuthProvider = ({ children }) => {
           } else {
             console.log("Error:", res.statusText);
           }
-        } catch (error) {
+        } catch (error) {q
           console.error("Error:", error.message);
         }
       }

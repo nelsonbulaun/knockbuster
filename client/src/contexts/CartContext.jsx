@@ -23,7 +23,7 @@ const CartProvider = ({ children }) => {
            Axios({
              method: "GET",
              withCredentials: true,
-             url: `${url + "/carts/users/" + user.username}` ,
+             url: `${url + "/carts/users/" + json_user.username}` ,
            }).then((res) => {
              setCart(res.data);
              console.log(res.data);

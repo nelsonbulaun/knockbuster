@@ -48,7 +48,7 @@ export const Login = () => {
           setUser(res.data);
           setNotificationType("alert");
           setNotificationText(`Welcome Back ${res.data.username}`);
-          navigate("");
+          // navigate("");
         }
         // getUser();
       }
@@ -79,7 +79,7 @@ export const Login = () => {
   const content = (
     <div>
       <div className="text-left pb-3">
-        <Link to="/register" className="text-sm">
+        <Link to="register" className="text-sm">
          New User? Create An Account
         </Link>
       </div>
