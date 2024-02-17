@@ -23,8 +23,6 @@ const TotalProvider = ({ children }) => {
   const [quantity, setQuantity] = useState(0);
   const [isLoading, setLoading] = useState(true);
   const { user } = useAuth();
-  // const userls = localStorage.getItem("user");
-  // const json_user = JSON.parse(userls);
 
   useEffect(() => {
     if (user) {
