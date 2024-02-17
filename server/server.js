@@ -79,6 +79,7 @@ app.use(
   cors({
     origin: "https://nelsonbulaun.github.io", // <-- location of the react app were connecting to
     credentials: true,
+    methods: ['GET', 'POST'],
   })
 );
 app.use(passport.initialize());
