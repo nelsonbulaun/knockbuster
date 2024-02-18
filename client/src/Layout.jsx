@@ -7,6 +7,7 @@ import { Alert } from "./Alert";
 const Layout = () => {
   return (
     <>
+      <Header />
       <Alert />
       <Navbar />
 
